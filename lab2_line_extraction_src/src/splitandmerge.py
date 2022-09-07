@@ -56,7 +56,7 @@ def split(points, split_thres, inter_thres, min_points, first_pt, last_pt):
     for i in range(first_pt, last_pt+1):
         x = points[0][i]
         y = points[1][i]
-        d = abs(a * x + b * y + c)
+        d = abs(a * x + b * y + c) / normal_magnitude
 
         # Check split threshold
         if d > split_thres:
